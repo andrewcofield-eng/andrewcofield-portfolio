@@ -18,7 +18,7 @@ export default function Hero() {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="font-mono text-sm text-[#e07a5f] mb-6 tracking-wider uppercase"
         >
-          A Creative Director&apos;s Story
+          Creative Operations Director | Product Information Management (PIM) Strategist | Marketing Technology Leader | AI Content Innovation | 15 Years Building Scalable Creative Systems
         </motion.p>
 
         {/* Main Quote */}
@@ -31,7 +31,7 @@ export default function Hero() {
           <p className="font-serif text-4xl md:text-5xl lg:text-6xl font-medium text-[#1a1f2e] leading-tight mb-4">
             &ldquo;Give me facts, I might listen.
             <br />
-            <span className="text-[#e07a5f] italic">Tell me a story</span> and you have my attention.&rdquo;
+            <span className="text-[#e07a5f] italic">Tell me a story<br></br></span> and you have my attention.&rdquo;
           </p>
           <footer className="font-mono text-sm text-[#1a1f2e]/60 mt-6">
             — Professor John McHale, Illinois State University
@@ -60,7 +60,10 @@ export default function Hero() {
           transition={{ duration: 0.6, delay: 1.2 }}
           className="text-lg text-[#1a1f2e]/70 max-w-2xl mb-8 leading-relaxed"
         >
-          I don&apos;t think the standard resume format is particularly good for storytelling. 
+          My professor at Illinois State University in Writing for Mass Media class 
+          used to say those two things daily. I still think about it, 
+          and how it drives so much of my own 
+          work to this day. I don&apos;t think the standard resume format is particularly good for storytelling. 
           Today, we use AI tools to write resumes for ATS systems. I send those too. 
           But if you&apos;re here, let me try something different.
         </motion.p>
@@ -71,7 +74,7 @@ export default function Hero() {
           transition={{ duration: 0.6, delay: 1.4 }}
           className="text-xl text-[#1a1f2e] font-medium mb-12"
         >
-          Let me tell you my story.
+          Let me tell you my story. I&apos;ll try to be clear.
         </motion.p>
 
         {/* CTA Buttons */}
