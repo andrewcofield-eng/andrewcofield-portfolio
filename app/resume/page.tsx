@@ -1,0 +1,169 @@
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Resume | Andrew Cofield",
+  description: "Professional resume and summary for ATS systems and traditional applications.",
+};
+
+export default function ResumePage() {
+  return (
+    <div className="min-h-screen bg-[#f7f5f0] pt-24 pb-24">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Header */}
+        <div className="mb-12 text-center">
+          <h1 className="font-serif text-4xl md:text-5xl font-semibold text-[#1a1f2e] mb-4">
+            Resume
+          </h1>
+          <p className="text-lg text-[#1a1f2e]/70 mb-8">
+            I send ATS-friendly resumes too. If you need one, here's the summary. 
+            But I hope you got the full story first.
+          </p>
+          
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="https://linkedin.com/in/andrew-cofield-8b2a887"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center px-8 py-4 border-2 border-[#1a1f2e] text-[#1a1f2e] font-medium rounded hover:bg-[#1a1f2e] hover:text-[#f7f5f0] transition-colors"
+            >
+              View LinkedIn Profile
+            </a>
+          </div>
+        </div>
+
+        {/* Plain Text Resume */}
+        <div className="bg-white rounded-lg shadow-sm p-8 md:p-12 border border-[#1a1f2e]/10">
+          <div className="font-mono text-sm text-[#1a1f2e]/80 whitespace-pre-wrap">
+{`ANDREW COFIELD
+Creative Director | Systems Builder | AI Explorer
+─────────────────────────────────────────────────────
+
+CONTACT
+Phone: 309.212.2157
+Email: andrewcofield@gmail.com
+LinkedIn: linkedin.com/in/andrew-cofield-8b2a887
+Website: andrewcofield.com
+Location: Charlotte, NC
+
+─────────────────────────────────────────────────────
+
+PROFESSIONAL SUMMARY
+
+Dynamic and innovative Creative Director with over 15 years of creative 
+production experience and 10 years of leadership in corporate creative roles. 
+Proven expertise in leveraging photography, video, and virtual photography 
+to drive brand visibility and sales. Demonstrated success in building and 
+managing Digital Asset Management (DAM) and Product Information Management 
+(PIM) systems globally for Electrolux and Sealed Air. Skilled in leveraging 
+Adobe Workfront for multiple projects across marketing and design teams. 
+High proficiency in Adobe Creative Suite, Agile methodologies, and AI-assisted 
+workflows. Awarded 2025 Akeneo Champions Global Ambassador.
+
+─────────────────────────────────────────────────────
+
+KEY ACHIEVEMENTS
+
+• Achieved significant cost savings (over $500,000) in photography and video 
+  costs in one year at InVue by creating commercial photography and product 
+  demonstration videos in-house.
+
+• Demonstrated proficiency in creating trade show displays from concept to 
+  production for Electrolux and Sealed Air.
+
+• Successfully constructed and managed Digital Asset Management systems 
+  globally for Electrolux and Sealed Air, including AEM Assets, Widen 
+  Collective, and Web DAM.
+
+• Awarded the 2025 Akeneo Champions Global Ambassador award for PIM work 
+  with Sealed Air and promotion of Akeneo as a premier PIM solution.
+
+• Completed intense 2-week training on Agile framework, methodologies and 
+  tools from Lean Dog Consulting to be Agile lead for marketing department.
+
+• Conceptualized and executed an innovative endcap display for Lowe's Home 
+  Improvement, resulting in a 200% increase in sales.
+
+─────────────────────────────────────────────────────
+
+EXPERIENCE
+
+DIRECTOR, CONTENT & DIGITAL OPERATIONS
+Sealed Air Corporation — Charlotte, NC | 2018 – 2024
+
+• Led and then operationalized AEM Assets installation along with Adobe 
+  Dynamic Media, integrating DAM with AEM Sites, Magento, Marketo, Workfront, 
+  and Adobe Creative Cloud.
+• Managed brand assets as the Digital Asset Management System Administrator 
+  and DAM Librarian.
+• Built and operated systems that deliver product information and marketing 
+  assets across multiple channels.
+
+CREATIVE DIRECTOR
+Electrolux Small Appliances — Charlotte, NC | 2016 – 2018
+
+• Championed the creative development of consumer communications for leading 
+  brands including Electrolux, Eureka Vacuum, Sanitaire Vacuum, Frigidaire, 
+  and their accessory brands.
+• Digital Asset Management: Functioned as both System Administrator and 
+  DAM Librarian.
+• Workfront Project Management System Admin for Small Appliances division.
+• Presentation Design: Collaborated with Sales and Marketing teams to create 
+  presentations for Walmart, Best Buy, Lowe's and other retail clients.
+• Multimedia Production Leadership: Served as primary lead for studio 
+  photography, graphic design, and video production.
+
+VISUAL COMMUNICATION DESIGN MANAGER
+Electrolux Small Appliances — Charlotte, NC | 2014 – 2016
+
+• End-to-end visual communication design process: Oversaw design team for 
+  diverse portfolio of in-house and licensed brands (Electrolux, Frigidaire, 
+  Eureka, 3M, Arm & Hammer).
+• In-House Design Team Leadership: Established and led in-house design team 
+  focusing on packaging and point-of-sale materials.
+
+MARKETING COMMUNICATIONS MANAGER
+InVue — Charlotte, NC | 2011 – 2014
+
+• Comprehensive Campaign Development: Spearheaded campaign and advertising 
+  development, from customer persona understanding to final production.
+• Created commercial photography and product demonstration videos in-house, 
+  achieving significant cost savings.
+
+─────────────────────────────────────────────────────
+
+EDUCATION
+
+ILLINOIS STATE UNIVERSITY | 2008 – 2009
+Master of Mass Communications, focus on Digital Communications
+
+SOUTHERN ILLINOIS UNIVERSITY | 2001 – 2003
+School of Communications, Commercial Photography
+
+HEARTLAND COMMUNITY COLLEGE | 2001 – 2003
+Associates Degree — Digital Media Design
+
+─────────────────────────────────────────────────────
+
+TECHNICAL SKILLS
+
+Adobe Creative Suite: Photoshop, Illustrator, InDesign, Premiere, After Effects
+DAM Systems: AEM Assets, Adobe Dynamic Media, Widen Collective, Web DAM
+PIM Systems: Akeneo (2025 Global Ambassador)
+Project Management: Adobe Workfront, Agile/Scrum/Lean certified
+3D & Visualization: Substance, virtual photography workflows
+AI & Emerging Tech: AI-assisted workflow development, agentic platform building
+
+─────────────────────────────────────────────────────
+
+AWARDS & RECOGNITION
+
+• 2025 Akeneo Champions Global Ambassador
+• Lean Dog Consulting Agile/Scrum Certification
+
+─────────────────────────────────────────────────────`}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
