@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
+import Image from "next/image";
 
 const featuredWork = [
   {
@@ -9,24 +10,28 @@ const featuredWork = [
     metric: "200% sales increase",
     category: "Retail Experience",
     description: "Conceptualized and executed an innovative endcap display for Lowe's Home Improvement.",
+    image: "https://res.cloudinary.com/dv9ttgxvy/image/upload/v1774127243/LowesEncap_hero.jpg",
   },
   {
     title: "InVue In-House Studio",
     metric: "$500,000+ saved",
     category: "Content Production",
     description: "Built in-house photography and video capabilities, eliminating external production costs.",
+    image: "https://res.cloudinary.com/dv9ttgxvy/image/upload/v1774127244/Microsoft_stand_0169_r6zuj3.jpg",
   },
   {
-    title: "Electrolux DAM System",
-    metric: "12 global markets",
-    category: "Systems Architecture",
-    description: "Implemented AEM Assets serving marketing teams across 12+ countries.",
+    title: "Sealed Air Virtual Photography",
+    metric: "Potential $700,000+ saved",
+    category: "3D Rendering",
+    description: "Pioneered Adobe Substance as substitue for traditional phogography.",
+    image: "https://res.cloudinary.com/dv9ttgxvy/image/upload/v1774126886/iPack-Prismiq-5curved-Camera_gicysk.jpg",
   },
   {
     title: "3M Visual Attention Service",
     metric: "Science-backed design",
     category: "Research & Strategy",
     description: "Used eye-tracking simulation to prove design decisions with empirical data.",
+    image: "https://res.cloudinary.com/dv9ttgxvy/image/upload/v1774127338/VAS-airspeed-COMPARE_szxjha.png",
   },
 ];
 
@@ -67,11 +72,14 @@ export default function WorkPreview() {
             >
               <Link href="/work">
                 <div className="relative aspect-video bg-[#1a1f2e]/5 rounded-lg mb-4 overflow-hidden">
-                  {/* Placeholder for project image */}
-                  <div className="absolute inset-0 flex items-center justify-center text-[#1a1f2e]/30">
-                    <span className="font-mono text-sm">[Project Image]</span>
-                  </div>
-                  <div className="absolute inset-0 bg-[#1a1f2e]/0 group-hover:bg-[#1a1f2e]/10 transition-colors duration-300" />
+                  <Image
+                    src={project.image}
+                    alt={project.title}
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-500"
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                  />
+                  <div className="absolute inset-0 bg-[#1a1f2e]/0 group-hover:bg-[#1a1f2e]/20 transition-colors duration-300" />
                 </div>
                 <div className="flex items-start justify-between mb-2">
                   <span className="font-mono text-xs text-[#e07a5f] uppercase tracking-wider">

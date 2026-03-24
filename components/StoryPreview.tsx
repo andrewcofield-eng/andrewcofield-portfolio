@@ -14,13 +14,13 @@ const chapters = [
     number: "02",
     title: "The Pivot",
     period: "Senior Year",
-    description: "My son was born. I became a jeweler. Then digital media called.",
+    description: "My son was born. I became a jeweler. Then I returned to school for digital media and mass communications.",
   },
   {
     number: "03",
     title: "The Designer",
     period: "2011-2016",
-    description: "Electrolux. Promoted to Creative Director. Built systems, not just pixels.",
+    description: "Electrolux. Promoted to Creative Director. Built systems and workflows, not just pixels.",
   },
   {
     number: "04",
