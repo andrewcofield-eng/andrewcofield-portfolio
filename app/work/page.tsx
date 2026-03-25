@@ -1,13 +1,8 @@
 import { Metadata } from "next";
-import Image from "next/image";
-
-import { Metadata } from "next";
-import Image from "next/image"; {
+import Image from "next/image"; Metadata = {
   title: "Work | Andrew Cofield",
   description: "Portfolio of creative campaigns, systems architecture, and measurable business results.",
 };
-
-const projects = [
 
 const projects = [
   {
