@@ -26,6 +26,9 @@ const projects = [
     skills: ["Studio Management", "Video Production", "Photography", "Cost Optimization"],
     images: [
       "https://res.cloudinary.com/dv9ttgxvy/image/upload/v1774127240/CT100_Swivel_0155_elpmwe.jpg",
+      "https://res.cloudinary.com/dv9ttgxvy/image/upload/v1774127244/Microsoft_stand_0169_r6zuj3.jpg",
+      "https://res.cloudinary.com/dv9ttgxvy/image/upload/v1774127245/Moto360_0092_bf3nrz.jpg",
+      "https://res.cloudinary.com/dv9ttgxvy/image/upload/v1774127250/2H7A0722_pvjl1r.jpg",
     ],
     video: null,
   },
