@@ -26,9 +26,6 @@ const projects = [
     skills: ["Studio Management", "Video Production", "Photography", "Cost Optimization"],
     images: [
       "https://res.cloudinary.com/dv9ttgxvy/image/upload/v1774127240/CT100_Swivel_0155_elpmwe.jpg",
-      "https://res.cloudinary.com/dv9ttgxvy/image/upload/v1774127244/Microsoft_stand_0169_r6zuj3.jpg",
-      "https://res.cloudinary.com/dv9ttgxvy/image/upload/v1774127245/Moto360_0092_bf3nrz.jpg",
-      "https://res.cloudinary.com/dv9ttgxvy/image/upload/v1774127250/2H7A0722_pvjl1r.jpg",
     ],
     video: null,
   },
@@ -83,6 +80,44 @@ const projects = [
     ],
     video: null,
   },
+  {
+    slug: "electrolux-multi-brand",
+    title: "Multi-Brand Creative Leadership",
+    category: "Brand Management",
+    metric: "6 brands. One in-house team.",
+    summary: "Led creative execution across six licensed and owned brands at Electrolux — Eureka, Electrolux, Sanitaire, Frigidaire Small Appliances, 3M Filtrete, and Arm & Hammer — spanning packaging, photography, digital ads, and video, all produced in-house.",
+    skills: ["Brand Management", "Packaging Design", "In-House Production"],
+    images: [
+      "https://res.cloudinary.com/dv9ttgxvy/image/upload/v1774127365/AS1000_AirSpeed_Whirlwind_mipqnd.jpg",
+      "https://res.cloudinary.com/dv9ttgxvy/image/upload/v1774127293/filtretenew_azkdbi.jpg",
+      "https://res.cloudinary.com/dv9ttgxvy/image/upload/v1774127284/anhPkg_ki2wzk.jpg",
+      "https://res.cloudinary.com/dv9ttgxvy/image/upload/v1774127281/AirSpeedOneBestBuy_g33dcw.png",
+      "https://res.cloudinary.com/dv9ttgxvy/image/upload/v1774127279/AirSpeedConcept_eg7y0t.png",
+      "https://res.cloudinary.com/dv9ttgxvy/image/upload/v1774127295/HomeSourcePkg_jdkwta.jpg",
+      "https://res.cloudinary.com/dv9ttgxvy/image/upload/v1774127296/image17_dt3xof.png",
+    ],
+    video: null,
+  },
+  {
+    slug: "bubble-wrap-appreciation-day",
+    title: "Bubble Wrap Appreciation Day",
+    category: "Social & Video Production",
+    metric: "$1,200 budget. Zero revisions.",
+    summary: "When my director said 'Andrew, a spoof infomercial for our new bubble wrap inflator seems like your kind of thing,' I could not have been more thrilled. Shot, scripted, and produced with almost the entire budget going to the voiceover. Not a single revision on the script or final cut. One of my favorite projects ever.",
+    skills: ["Video Production", "Scriptwriting", "Social Media"],
+    images: [],
+    video: "https://vimeo.com/312193191",
+  },
+  {
+    slug: "dam-hype-video",
+    title: "Getting People Pretty DAM Hyped",
+    category: "Internal Communications",
+    metric: "Stakeholder buy-in through storytelling",
+    summary: "I used to make hype videos for a minor league hockey team. When I built AEM Assets as Sealed Air's enterprise DAM, I used those same skills to get internal stakeholders genuinely excited. Big systems need big energy.",
+    skills: ["Video Production", "Change Management", "Stakeholder Communication"],
+    images: [],
+    video: "https://vimeo.com/1133198133",
+  },
 ];
 
 function Slideshow({ images }: { images: string[] }) {
@@ -116,7 +151,6 @@ function Slideshow({ images }: { images: string[] }) {
           />
         </div>
       ))}
-      {/* Dot indicators */}
       {images.length > 1 && (
         <div className="absolute bottom-2 left-0 right-0 flex justify-center gap-1.5 z-10">
           {images.map((_, i) => (
