@@ -1,10 +1,7 @@
-import { Metadata } from "next";
-import Image from "next/image";
+"use client";
 
-export const metadata: Metadata = {
-  title: "Work | Andrew Cofield",
-  description: "Portfolio of creative campaigns, systems architecture, and measurable business results.",
-};
+import { useState, useEffect } from "react";
+import Image from "next/image";
 
 const projects = [
   {
@@ -14,7 +11,10 @@ const projects = [
     metric: "200% sales increase",
     summary: "Conceptualized and executed an innovative endcap display for Lowe's Home Improvement, resulting in a 200% increase in sales.",
     skills: ["Retail Design", "Clear Problem Statement", "Vendor Management", "Sales Strategy"],
-    image: "https://res.cloudinary.com/dv9ttgxvy/image/upload/v1774127243/LowesEncap_hero.jpg",
+    images: [
+      "https://res.cloudinary.com/dv9ttgxvy/image/upload/v1774127243/LowesEncap_hero.jpg",
+      "https://res.cloudinary.com/dv9ttgxvy/image/upload/v1774127288/BrushrollCleanDisplay_tbbw7s.png",
+    ],
     video: null,
   },
   {
@@ -24,7 +24,9 @@ const projects = [
     metric: "$500,000+ saved annually",
     summary: "Built in-house photography and video capabilities, creating commercial content internally and eliminating external production costs.",
     skills: ["Studio Management", "Video Production", "Photography", "Cost Optimization"],
-    image: "https://res.cloudinary.com/dv9ttgxvy/image/upload/v1774127240/CT100_Swivel_0155_elpmwe.jpg",
+    images: [
+      "https://res.cloudinary.com/dv9ttgxvy/image/upload/v1774127240/CT100_Swivel_0155_elpmwe.jpg",
+    ],
     video: null,
   },
   {
@@ -34,7 +36,12 @@ const projects = [
     metric: "CAD-to-commercial ready",
     summary: "Implemented virtual product photography using Adobe Substance 3D, generating photorealistic renders directly from CAD engineering drawings — eliminating traditional photo shoots.",
     skills: ["Adobe Substance 3D", "CAD Integration", "Virtual Photography", "Content Production"],
-    image: "https://res.cloudinary.com/dv9ttgxvy/image/upload/v1774126887/shrinkBeefEyeOfRound-AndCheese-Prismiq.jpg-Camera_dfwmbc.jpg",
+    images: [
+      "https://res.cloudinary.com/dv9ttgxvy/image/upload/v1774126887/shrinkBeefEyeOfRound-AndCheese-Prismiq.jpg-Camera_dfwmbc.jpg",
+      "https://res.cloudinary.com/dv9ttgxvy/image/upload/v1774127365/CS-winebox-Prismiq-Camera_jvuvrh.jpg",
+      "https://res.cloudinary.com/dv9ttgxvy/image/upload/v1774127365/farmbrandHamburgerOnTeal-Camera_yv3ix4.jpg",
+      "https://res.cloudinary.com/dv9ttgxvy/image/upload/v1774126648/ipack_vphmx3.jpg",
+    ],
     video: null,
   },
   {
@@ -44,7 +51,7 @@ const projects = [
     metric: "2025 Akeneo Global Ambassador",
     summary: "Led PIM and DAM implementation with full MarTech stack integration including Magento, Marketo, and Adobe Dynamic Media.",
     skills: ["Akeneo PIM", "AEM Assets", "MarTech Integration", "Adobe Dynamic Media"],
-    image: null,
+    images: [],
     video: "https://vimeo.com/1077690401",
   },
   {
@@ -54,7 +61,9 @@ const projects = [
     metric: "Science-backed design decisions",
     summary: "Used eye-tracking simulation software to prove design effectiveness with empirical data rather than subjective opinion.",
     skills: ["Design Research", "Eye Tracking", "Data-Driven Design", "Stakeholder Communication"],
-    image: "https://res.cloudinary.com/dv9ttgxvy/image/upload/v1774127338/VAS-airspeed-COMPARE_szxjha.png",
+    images: [
+      "https://res.cloudinary.com/dv9ttgxvy/image/upload/v1774127338/VAS-airspeed-COMPARE_szxjha.png",
+    ],
     video: null,
   },
   {
@@ -64,10 +73,63 @@ const projects = [
     metric: "IPPE show-stopping booth",
     summary: "Evolved the Cryovac 'Carnivores Will Go Wild' campaign into a compelling, high-impact trade show booth experience at IPPE — the world's largest poultry and meat industry event.",
     skills: ["Campaign Development", "Trade Show Design", "Brand Storytelling", "Experiential Marketing"],
-    image: "https://res.cloudinary.com/dv9ttgxvy/image/upload/v1774126688/carnivore1-1_o5otts.png",
+    images: [
+      "https://res.cloudinary.com/dv9ttgxvy/image/upload/v1774126688/carnivore1-1_o5otts.png",
+      "https://res.cloudinary.com/dv9ttgxvy/image/upload/v1774127360/20200128_140409-01_rmxbxa.jpg",
+      "https://res.cloudinary.com/dv9ttgxvy/image/upload/v1774127357/20200128_135756_gl6ek5.jpg",
+    ],
     video: null,
   },
 ];
+
+function Slideshow({ images }: { images: string[] }) {
+  const [current, setCurrent] = useState(0);
+
+  useEffect(() => {
+    if (images.length <= 1) return;
+    const timer = setInterval(() => {
+      setCurrent((prev) => (prev + 1) % images.length);
+    }, 3500);
+    return () => clearInterval(timer);
+  }, [images.length]);
+
+  if (images.length === 0) return null;
+
+  return (
+    <div className="relative w-full h-full">
+      {images.map((src, i) => (
+        <div
+          key={src}
+          className={`absolute inset-0 transition-opacity duration-700 ${
+            i === current ? "opacity-100" : "opacity-0"
+          }`}
+        >
+          <Image
+            src={src}
+            alt={`Slide ${i + 1}`}
+            fill
+            className="object-cover"
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          />
+        </div>
+      ))}
+      {/* Dot indicators */}
+      {images.length > 1 && (
+        <div className="absolute bottom-2 left-0 right-0 flex justify-center gap-1.5 z-10">
+          {images.map((_, i) => (
+            <button
+              key={i}
+              onClick={() => setCurrent(i)}
+              className={`w-1.5 h-1.5 rounded-full transition-all ${
+                i === current ? "bg-white scale-125" : "bg-white/50"
+              }`}
+            />
+          ))}
+        </div>
+      )}
+    </div>
+  );
+}
 
 export default function WorkPage() {
   return (
@@ -93,7 +155,7 @@ export default function WorkPage() {
               key={project.slug}
               className="bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden border border-[#1a1f2e]/5 h-full flex flex-col"
             >
-              {/* Media: Vimeo embed or Cloudinary image */}
+              {/* Media */}
               <div className="aspect-video bg-[#1a1f2e]/5 relative overflow-hidden">
                 {project.video ? (
                   <iframe
@@ -103,14 +165,8 @@ export default function WorkPage() {
                     allowFullScreen
                     title={project.title}
                   />
-                ) : project.image ? (
-                  <Image
-                    src={project.image}
-                    alt={project.title}
-                    fill
-                    className="object-cover"
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                  />
+                ) : project.images.length > 0 ? (
+                  <Slideshow images={project.images} />
                 ) : (
                   <div className="absolute inset-0 flex items-center justify-center text-[#1a1f2e]/30">
                     <span className="font-mono text-sm">[Project Image]</span>
