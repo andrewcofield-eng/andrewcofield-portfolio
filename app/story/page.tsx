@@ -14,7 +14,7 @@ const chapters = [
     location: "Southern Illinois University",
     content: `I went to Southern Illinois University to become a photography professor. Art, design, communication, technology — photography seemed to pull it all together.
 
-I loved the darkroom. The way light and chemistry created something permanent from a moment. I loved teaching, too — the way a student's face changed when they finally "saw" light.
+I loved the darkroom. The way light and chemistry created something permanent from a moment. I loved teaching, too — sharing knowledge and watching someone else grow, nothing better.
 
 But life had other plans.`,
   },
@@ -25,7 +25,7 @@ But life had other plans.`,
     location: "Life Happened",
     content: `My son was born my senior year.
 
-I needed to earn a living, so I became a jeweler. It was creative work, precise work, satisfying work. I designed pieces, worked with customers, built something with my hands.
+I needed to earn a living, so I became a jeweler. It was creative work, precise work, satisfying work, but pretty isolating. At the end of the day, I had something shiny to show for it.
 
 When that company closed, I went back to school for digital media at Illinois State University. I was building on the same foundation — art, design, communication, technology — just with new tools.
 
@@ -52,6 +52,8 @@ I led creative for Electrolux, Frigidaire, Eureka, 3M, Arm & Hammer — guiding 
     period: "2016-2024",
     location: "Sealed Air Corporation",
     content: `At Sealed Air, my role evolved from storytelling to building the infrastructure for storytelling.
+
+When I first started at Sealed Air, I was back to creative design. I came up with ads. I made Bubble Wrap Appreciation Day Videos. The team grew. My Creative Director discovered my technical capabilities and saw how well I worked with IT building systems. My role changed.
 
 I led the strategic building and operations of systems that deliver product information and marketing assets across multiple channels. PIM systems. DAM platforms. 3D visualization pipelines.
 
