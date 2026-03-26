@@ -4,6 +4,22 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 
 const projects = [
+    {
+    slug: "agentic-flow",
+    title: "AgenticFlow — Autonomous ABM",
+    category: "AI & Automation",
+    metric: "🚧 Live & evolving",
+    summary: "Built an AI-powered marketing platform from scratch — connecting PIM, DAM, and CRM so AI agents can identify warm prospects and generate personalized campaigns automatically. The logical next chapter of 30 years connecting creative systems.",
+    skills: ["LangChain", "FastAPI", "Next.js"],
+    images: [
+      "https://res.cloudinary.com/dv9ttgxvy/image/upload/v1774447587/agenticflowarchitechture_copy_logr4w.png",
+    ],
+    video: null,
+    links: [
+      { label: "Live Site", href: "https://agenticflowmarketing.com" },
+      { label: "Dashboard", href: "https://pim-dam-crm-integration-production-62d7.up.railway.app/" },
+    ],
+  },
   {
     slug: "lowes-endcap",
     title: "Lowe's Endcap Display",
@@ -211,7 +227,7 @@ export default function WorkPage() {
                 )}
               </div>
 
-              {/* Content */}
+                            {/* Content */}
               <div className="p-6 flex-1 flex flex-col">
                 <div className="flex items-center justify-between mb-3">
                   <span className="font-mono text-xs text-[#e07a5f] uppercase tracking-wider">
@@ -240,6 +256,22 @@ export default function WorkPage() {
                     </span>
                   ))}
                 </div>
+
+                {project.links && project.links.length > 0 && (
+                  <div className="flex gap-3 mt-4 pt-4 border-t border-[#1a1f2e]/5">
+                    {project.links.map((link) => (
+                      <a
+                        key={link.href}
+                        href={link.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-xs font-mono text-[#e07a5f] hover:text-[#1a1f2e] transition-colors underline underline-offset-2"
+                      >
+                        {link.label} ↗
+                      </a>
+                    ))}
+                  </div>
+                )}
               </div>
             </div>
           ))}
